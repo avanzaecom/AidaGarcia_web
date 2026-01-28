@@ -319,10 +319,36 @@ img {
 
 .service-card {
     background-color: #fff;
-    padding: 40px;
+    padding: 20px;
     text-align: center;
     transition: var(--transition);
     border: 1px solid transparent;
+}
+
+/* Instagram Video Wrapper */
+.instagram-frame-wrapper {
+    width: 100%;
+    aspect-ratio: 1;
+    /* Force square aspect ratio */
+    overflow: hidden;
+    border-radius: 12px;
+    /* Smoother corner like screenshot */
+    margin-bottom: 20px;
+    position: relative;
+    background: #f0f0f0;
+    /* Fallback/loading background */
+    cursor: pointer;
+}
+
+iframe.instagram-custom-frame {
+    width: 100%;
+    height: 100%;
+    /* Fill the wrapper */
+    position: absolute;
+    /* Position strictly within wrapper */
+    top: 0;
+    left: 0;
+    border: none;
 }
 
 .service-card:hover {
