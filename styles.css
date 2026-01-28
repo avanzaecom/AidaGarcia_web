@@ -325,30 +325,27 @@ img {
     border: 1px solid transparent;
 }
 
-/* Instagram Video Wrapper */
-.instagram-frame-wrapper {
+/* Service Image Wrapper */
+.service-image-wrapper {
     width: 100%;
     aspect-ratio: 1;
     /* Force square aspect ratio */
     overflow: hidden;
     border-radius: 12px;
-    /* Smoother corner like screenshot */
     margin-bottom: 20px;
     position: relative;
     background: #f0f0f0;
-    /* Fallback/loading background */
-    cursor: pointer;
 }
 
-iframe.instagram-custom-frame {
+.service-image-wrapper img {
     width: 100%;
     height: 100%;
-    /* Fill the wrapper */
-    position: absolute;
-    /* Position strictly within wrapper */
-    top: 0;
-    left: 0;
-    border: none;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-image-wrapper img {
+    transform: scale(1.05);
 }
 
 .service-card:hover {
